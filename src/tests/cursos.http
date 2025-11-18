@@ -1,0 +1,25 @@
+@url = https://organic-guacamole-4xpqj999r4j2j4qw-8080.app.github.dev
+
+GET {{url}}/cursos
+
+###
+POST {{url}}/cursos
+Content-Type: application/json
+
+{
+    "nome" : "Matemática"
+}
+{
+    "cargaHoraria" : "10"
+}
+
+###
+PUT {{url}}/cursos/5
+Content-Type: application/json
+
+{
+    "nome" : "portugues"
+}
+
+###
+DELETE {{url}}/cursos/4
