@@ -26,9 +26,10 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.POST, "/auth").permitAll() // Login liberado
-                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll() // Swagger liberado
-                .anyRequest().authenticated()) // O resto exige token
+                .requestMatchers(HttpMethod.POST, "/auth").permitAll() 
+                .requestMatchers(HttpMethod.GET, "/public").permitAll()
+                .requestMatchers("/swagger-ui/**").permitAll()
+                .requestMatchers("/docs*/**").permitAll())
             .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
