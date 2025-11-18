@@ -1,25 +1,15 @@
 @url = https://organic-guacamole-4xpqj999r4j2j4qw-8080.app.github.dev
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJGaWxtZXMgQVBJIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3NjM0OTM5MjZ9.hn6DMk0c2wCMVeO4KxOPxu86LUKu7hHcGEXd_rItlqE
 
-GET {{url}}/cursos
+GET {{url}}/matriculas
 Authorization: Bearer {{token}}
 
 ###
-POST {{url}}/cursos
+POST {{url}}/matriculas
 Content-Type: application/json
 
 {
-    "nome" : "Matemática",
-    "cargaHoraria" : "10"
+    "idAluno" : "6",
+    "idCurso" : "6"
+
 }
-
-###
-PUT {{url}}/cursos/8
-Content-Type: application/json
-
-{
-    "nome" : "portugues"
-}
-
-###
-DELETE {{url}}/cursos/8

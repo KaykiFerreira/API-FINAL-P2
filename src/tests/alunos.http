@@ -1,6 +1,8 @@
 @url = https://organic-guacamole-4xpqj999r4j2j4qw-8080.app.github.dev
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJGaWxtZXMgQVBJIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3NjM0OTM5MjZ9.hn6DMk0c2wCMVeO4KxOPxu86LUKu7hHcGEXd_rItlqE
 
 GET {{url}}/alunos
+Authorization: Bearer {{token}}
 
 ###
 POST {{url}}/alunos
@@ -19,4 +21,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{url}}/alunos/2
+DELETE {{url}}/alunos/3
